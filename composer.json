@@ -7,7 +7,7 @@
         }
     ],
     "require": {
-        "php2wsdl/php2wsdl": "^0.7.0"
+        "illuminate/database": "*"
     },
     "autoload": {
         "psr-4": {
@@ -15,6 +15,9 @@
         },
         "classmap": [
             "Model/"
+        ],
+        "files": [
+            "config.php"
         ]
     }
 }

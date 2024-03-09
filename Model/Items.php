@@ -1,25 +1,7 @@
 <?php
-
-class Item
+class Items extends Illuminate\Database\Eloquent\Model
 {
-    private static $items = [
-        [
-            "id" => "100",
-            "name" => "new_glass very new1 ",
-            "price" => "14.00",
-            "units_in_stock" => "4",
-        ]
-    ];
-
-    public function get_Item(int $id)
-    {
-        foreach (self::$items as $item) {
-            if ($item["id"] == $id) {
-                $this->$item = $item;
-                return $item;
-            }
-        }
-        return null;
-    }
-
+    public $timestamps = false;
+    protected $table = 'items';
+    protected $guarded = [];
 }
